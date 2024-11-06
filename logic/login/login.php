@@ -1,11 +1,11 @@
 <?php
 if ($_POST) {
-    session_start(["name"=> "SistemaVentas"]);
+    session_start(["name" => "SistemaVentas"]);
     //requerimos los archivos
     require_once "../conexion.php";
     require_once "../mysql.php";
     //recibimos los datos del formulario
-    $user = $_POST["txtUser"];
+    $user = $_POST["txtuser"];
     $password = $_POST["txtpassword"];
     //validamos la imformacion que se recibio no este vacia
     if (
@@ -13,7 +13,7 @@ if ($_POST) {
     ) {
         $data = array(
             "title" => "ocurrio un error inesperado",
-            "contet" => "campos vacios",
+            "content" => "campos vacios",
             "status" => false
         );
         echo json_encode($data);
@@ -23,7 +23,7 @@ if ($_POST) {
     WHERE u.u_user=? AND u.u_password=?;";
     $arrData = array($user, $password);
     $request = select($conexion, $arrData, $sql);
-    if($request){
+    if (!$request) {
         $data = array(
             "title" => "Ocurrio un error inesperado",
             "content" => "El usuario o la contraseña no existes",
@@ -33,9 +33,9 @@ if ($_POST) {
         die();
     }
     $_SESSION["sesion_login"]["info"] = $request;
-    $data=array(
-        "url"=> "?v=home",
-        "status"=> true,
+    $data = array(
+        "url" => "?v=home",
+        "status" => true,
     );
     echo json_encode($data);
 }

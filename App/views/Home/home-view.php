@@ -32,7 +32,7 @@
             <!-- Vista principal del sistema -->
             <div class="content-view">
                 <h2>Bienvenido al sistema</h2>
-                <p>Esta es la vista principal donde se mostrarán las distintas vistas del sistema.</p>
+                <p>bienvenido al sistema usuario >?= $_SESSION["sesion_login"]["info"]</p>
             </div>
         </div>
     </div>

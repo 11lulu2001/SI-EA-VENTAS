@@ -14,7 +14,7 @@
         <form id="form_login" class="login-form">
             <div class="form-group">
                 <label for="txtuser" class="form-label">Usuario</label>
-                <input type="text" name="textuser" id="txtuser" class="form-input">
+                <input type="text" name="txtuser" id="txtuser" class="form-input">
             </div>
             <div class="form-group">
                 <label for="txtpassword" class="form-label">Contraseña</label>
