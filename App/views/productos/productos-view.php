@@ -37,14 +37,11 @@
                 <h2>Gestión de Productos</h2>
                 <p>Gestión y administración de productos</p>
             </div>
-
-            <!-- Formulario y tabla de productos -->
             <section class="content-body">
-                <!-- Formulario de productos -->
                 <div class="form-container">
                     <form action="">
                         <div class="form-group">
-                            <label for="txtnombre">Nombre del Producto</label>
+                            <label for="txtnombre">Nombre </label>
                             <input type="text" name="txtnombre" id="txtnombre" placeholder="Ingrese el nombre del producto" required>
                         </div>
                         <div class="form-group">
@@ -83,31 +80,19 @@
                         <thead>
                             <tr>
                                 <th>#</th>
+                                <th>idproductos</th>
                                 <th>Nombre</th>
                                 <th>Descripción</th>
-                                <th>Categoría</th>
+                                <th>Categoría</th> 
+                                <th>fecha de vencimiento</th>
                                 <th>Costo Precio</th>
                                 <th>Precio de Venta</th>
                                 <th>Descuento</th>
+                                <th>stock</th>
                                 <th>Acciones</th>
                             </tr>
                         </thead>
-                        <tbody>
-                            <!-- Datos de productos dinámicos -->
-                            <tr>
-                                <td>01</td>
-                                <td>Producto A</td>
-                                <td>Descripción del producto A</td>
-                                <td>Categoría A</td>
-                                <td>$100.00</td>
-                                <td>$150.00</td>
-                                <td>10%</td>
-                                <td>
-                                    <button class="btn-action edit">Editar</button>
-                                    <button class="btn-action delete">Eliminar</button>
-                                </td>
-                            </tr>
-                            <!-- Más productos -->
+                        <tbody id="table-body">
                         </tbody>
                     </table>
                 </div>
@@ -117,7 +102,7 @@
     <script>
         let base_url = "<?= BASE_URL ?>";
     </script>
-    <script src="<?= BASE_URL ?>App/assets/js/js main.js"></script>
+    <script src="<?= BASE_URL ?>App/assets/js/productos/functions_producto.js"></script>
 
 </body>
 

@@ -12,7 +12,8 @@ function register($conexion, array $arrData, string $sql)
     }
 }
 //funcion que me permite obtener la informacion de las tablas 
-function select( $conexion,array $arrData = array(), string $sql){
+function select($conexion, array $arrData = array(), string $sql)
+{
     try {
         //preparamos la consulta con la conexion
         $prepared = $conexion->prepare($sql);
@@ -23,4 +24,17 @@ function select( $conexion,array $arrData = array(), string $sql){
         echo "Error: " . $e->getMessage();
     }
 }
- 
+
+//funcion que me permite obtener la informacion de las tablas 
+function select_all($conexion, array $arrData = array(), string $sql)
+{
+    try {
+        //preparamos la consulta con la conexion
+        $prepared = $conexion->prepare($sql);
+        $prepared->execute($arrData);
+        $requet = $prepared->fetchAll(PDO::FETCH_ASSOC);
+        return $requet;
+    } catch (PDOException $e) {
+        echo "Error: " . $e->getMessage();
+    }
+}

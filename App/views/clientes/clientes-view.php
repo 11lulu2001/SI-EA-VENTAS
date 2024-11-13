@@ -85,33 +85,18 @@
                         <thead>
                             <tr>
                                 <th>#</th>
+                                <th>idclientes</th>
                                 <th>Nombre</th>
                                 <th>Apellido</th>
-                                <th>Nacionalidad o DNI</th>
+                                <th>DNI</th>
                                 <th>Fecha de Nacimiento</th>
                                 <th>Teléfono</th>
                                 <th>Correo</th>
                                 <th>ID Usuario</th>
                                 <th>Acciones</th>
-                            </tr>
+                            </tr>                               
                         </thead>
-                        <tbody>
-                            <!-- Datos de clientes dinámicos -->
-                            <tr>
-                                <td>01</td>
-                                <td>Juan</td>
-                                <td>Pérez</td>
-                                <td>Argentina</td>
-                                <td>1990-05-12</td>
-                                <td>+54 11 1234 5678</td>
-                                <td>juan.perez@example.com</td>
-                                <td>123</td>
-                                <td>
-                                    <button class="btn-action edit">Editar</button>
-                                    <button class="btn-action delete">Eliminar</button>
-                                </td>
-                            </tr>
-                            <!-- Más clientes -->
+                        <tbody id="table-body">
                         </tbody>
                     </table>
                 </div>
@@ -121,7 +106,7 @@
     <script>
         let base_url = "<?= BASE_URL ?>";
     </script>
-    <script src="<?= BASE_URL ?>App/assets/js/js main.js"></script>
+    <script src="<?= BASE_URL ?>App/assets/js/clientes/js functions_clientes.js"></script>
 
 </body>
 

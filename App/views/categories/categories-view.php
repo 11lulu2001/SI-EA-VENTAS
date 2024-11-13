@@ -38,7 +38,7 @@
             </div>
             <section class="content-body">
                 <div class="form-container">
-                    <form action="">
+                    <form id="formSend">
                         <div class="form-group">
                             <label for="txtnombre">nombre</label>
                             <input type="text" name="txtnombre" id="txtnombre" placeholder="ingrese el nombre de la categoria" required>
@@ -65,14 +65,9 @@
                             </tr>
                         </thead>
 
-                        <body>
-                            <td>
-                            <td> 01</td>
-                            <td>categoria</td>
-                            <td>descripcion</td>
-                            <tr></tr>
-                            </tr>
-                        </body>
+                        <tbody id="table-body">
+                           
+                        </tbody>
                     </table>
 
                 </div>
@@ -82,7 +77,7 @@
     <script>
         let base_url = "<?= BASE_URL ?>";
     </script>
-    <script src="<?= BASE_URL ?>App/assets/js/js main.js"></script>
+    <script src="<?= BASE_URL ?>App/assets/js/categories/functions_categories.js"></script>
 
 </body>
 
